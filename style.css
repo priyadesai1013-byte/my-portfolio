@@ -1,0 +1,89 @@
+:root {
+      --navy: #142b3b;
+      --teal: #1d817b;
+      --gold: #e8b86d;
+      --cream: #f7f5f0;
+      --ink: #25313a;
+      --muted: #687780;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--cream); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 92%); margin: auto; }
+    header { background: var(--navy); color: white; position: sticky; top: 0; z-index: 10; box-shadow: 0 3px 14px #0002; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 15px 0; }
+    .brand { font-size: 1.25rem; font-weight: 800; letter-spacing: .5px; }
+    .brand span { color: var(--gold); }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+    nav a { font-size: .94rem; color: #eef4f6; }
+    nav a:hover { color: var(--gold); }
+    .hero { color: white; background: linear-gradient(90deg, #102635e8, #1026357a), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=85') center/cover; min-height: 480px; display: flex; align-items: center; }
+    .hero-content { max-width: 650px; padding: 70px 0; }
+    .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-weight: 700; font-size: .8rem; }
+    h1 { font-size: clamp(2.3rem, 5vw, 4.2rem); line-height: 1.08; margin: 15px 0; }
+    .hero p { font-size: 1.1rem; max-width: 570px; color: #f0f3f4; }
+    .btn { display: inline-block; border: 0; border-radius: 8px; background: var(--teal); color: white; padding: 12px 19px; font-weight: 700; cursor: pointer; transition: .2s; }
+    .btn:hover { background: #176c67; transform: translateY(-1px); }
+    .btn.gold { background: var(--gold); color: var(--navy); }
+    section { padding: 64px 0; }
+    .section-head { text-align: center; margin-bottom: 30px; }
+    .section-head h2 { color: var(--navy); margin: 0 0 7px; font-size: clamp(1.7rem, 3vw, 2.5rem); }
+    .section-head p { margin: 0; color: var(--muted); }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: -35px; position: relative; }
+    .feature { background: white; padding: 24px; border-radius: 14px; box-shadow: 0 10px 30px #10263512; text-align: center; }
+    .feature .emoji { font-size: 2rem; }
+    .feature h3 { margin: 8px 0 5px; color: var(--navy); }
+    .feature p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .rooms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .room-card { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 7px 24px #10263512; }
+    .room-card img { width: 100%; height: 205px; object-fit: cover; display: block; }
+    .room-body { padding: 20px; }
+    .room-body h3 { margin: 0 0 5px; color: var(--navy); }
+    .room-body p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+    .room-bottom { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .price { font-weight: 800; color: var(--teal); font-size: 1.1rem; }
+    .price small { color: var(--muted); font-weight: 400; font-size: .75rem; }
+    .booking-wrap { display: grid; grid-template-columns: .85fr 1.15fr; gap: 30px; align-items: start; }
+    .booking-info { background: var(--navy); color: white; border-radius: 16px; padding: 30px; }
+    .booking-info h3 { font-size: 1.7rem; margin-top: 0; }
+    .booking-info p { color: #dce5e8; }
+    .booking-info li { margin: 10px 0; }
+    form, .booking-list { background: white; border-radius: 16px; padding: 26px; box-shadow: 0 7px 24px #10263510; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field.full { grid-column: 1 / -1; }
+    label { font-size: .9rem; font-weight: 700; color: var(--navy); }
+    input, select, textarea { width: 100%; border: 1px solid #d4dde0; border-radius: 8px; padding: 11px 12px; font: inherit; color: var(--ink); background: #fff; }
+    input:focus, select:focus, textarea:focus { outline: 2px solid #1d817b35; border-color: var(--teal); }
+    .estimate { background: #edf7f5; padding: 12px 14px; border-radius: 8px; color: var(--navy); font-weight: 700; }
+    .message { margin: 14px 0 0; font-weight: 700; }
+    .success { color: #16724d; }
+    .error { color: #b42318; }
+    .booking-list { margin-top: 22px; }
+    .booking-list h3 { margin-top: 0; color: var(--navy); }
+    .booking-item { border: 1px solid #e1e7e8; border-radius: 10px; padding: 14px; margin: 12px 0; display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+    .booking-item p { margin: 4px 0; color: var(--muted); font-size: .9rem; }
+    .delete-btn { background: #fff0ee; color: #a52b21; border: 0; border-radius: 7px; padding: 7px 10px; cursor: pointer; }
+    .empty { color: var(--muted); font-size: .94rem; }
+    .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .contact-card { background: white; border-radius: 12px; padding: 22px; text-align: center; }
+    .contact-card h3 { margin: 5px 0; color: var(--navy); }
+    .contact-card p { margin: 0; color: var(--muted); }
+    footer { background: #0d202d; color: #d9e3e7; padding: 24px 0; text-align: center; }
+    footer p { margin: 4px 0; font-size: .9rem; }
+    @media (max-width: 800px) {
+      .rooms { grid-template-columns: repeat(2, 1fr); }
+      .booking-wrap { grid-template-columns: 1fr; }
+      .features, .contact-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 420px; }
+    }
+    @media (max-width: 560px) {
+      .nav { align-items: flex-start; flex-direction: column; gap: 10px; }
+      nav { gap: 12px; }
+      .rooms { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      section { padding: 48px 0; }
+      .booking-item { flex-direction: column; }
+    }

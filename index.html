@@ -1,0 +1,229 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Vista | Hotel Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">GRAND <span>VISTA</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#booking">Book Now</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="eyebrow">Welcome to Grand Vista</div>
+        <h1>Your comfort.<br>Your perfect stay.</h1>
+        <p>Enjoy a relaxing stay with comfortable rooms, friendly service, and facilities designed to make every visit special.</p>
+        <a class="btn gold" href="#booking">Book a Room</a>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="features" id="facilities">
+        <article class="feature">
+          <div class="emoji">🛏️</div>
+          <h3>Comfortable Rooms</h3>
+          <p>Clean, spacious rooms for every type of traveller.</p>
+        </article>
+        <article class="feature">
+          <div class="emoji">📶</div>
+          <h3>Free Wi-Fi</h3>
+          <p>Stay connected during your visit.</p>
+        </article>
+        <article class="feature">
+          <div class="emoji">🍽️</div>
+          <h3>Restaurant</h3>
+          <p>Enjoy delicious meals and refreshments.</p>
+        </article>
+      </div>
+    </div>
+
+    <section id="rooms">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Rooms</h2>
+          <p>Choose a room that suits your needs and budget.</p>
+        </div>
+        <div class="rooms">
+          <article class="room-card">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80" alt="Standard hotel room">
+            <div class="room-body">
+              <h3>Standard Room</h3>
+              <p>Cozy room with essential facilities, ideal for short stays.</p>
+              <div class="room-bottom">
+                <span class="price">₹1,500 <small>/ night</small></span>
+                <button class="btn choose-room" data-room="Standard Room">Select</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" alt="Deluxe hotel room">
+            <div class="room-body">
+              <h3>Deluxe Room</h3>
+              <p>Extra space and a stylish interior for a relaxed stay.</p>
+              <div class="room-bottom">
+                <span class="price">₹2,500 <small>/ night</small></span>
+                <button class="btn choose-room" data-room="Deluxe Room">Select</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=900&q=80" alt="Luxury suite">
+            <div class="room-body">
+              <h3>Luxury Suite</h3>
+              <p>Premium comfort with a separate sitting area.</p>
+              <div class="room-bottom">
+                <span class="price">₹4,000 <small>/ night</small></span>
+                <button class="btn choose-room" data-room="Luxury Suite">Select</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" style="background:#eef1ed">
+      <div class="container">
+        <div class="section-head">
+          <h2>Room Reservation</h2>
+          <p>Fill in the details below to create a demo booking.</p>
+        </div>
+
+        <div class="booking-wrap">
+          <aside class="booking-info">
+            <div class="eyebrow">Easy booking</div>
+            <h3>Plan your stay</h3>
+            <p>Choose your room, select your dates, and review the estimated cost before submitting.</p>
+            <ul>
+              <li>Simple booking form</li>
+              <li>Automatic night and price calculation</li>
+              <li>Booking list displayed on this device</li>
+            </ul>
+            <p><strong>Note:</strong> This is a student demo project. It does not process real payments or send bookings to a hotel.</p>
+          </aside>
+
+          <div>
+            <form id="bookingForm">
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="guestName">Guest Name *</label>
+                  <input id="guestName" name="guestName" type="text" placeholder="Enter full name" required minlength="2">
+                </div>
+
+                <div class="field">
+                  <label for="email">Email *</label>
+                  <input id="email" name="email" type="email" placeholder="name@example.com" required>
+                </div>
+
+                <div class="field">
+                  <label for="phone">Phone Number *</label>
+                  <input id="phone" name="phone" type="tel" placeholder="10-digit phone number" pattern="[0-9]{10}" maxlength="10" required>
+                </div>
+
+                <div class="field">
+                  <label for="roomType">Room Type *</label>
+                  <select id="roomType" name="roomType" required>
+                    <option value="Standard Room">Standard Room — ₹1,500/night</option>
+                    <option value="Deluxe Room">Deluxe Room — ₹2,500/night</option>
+                    <option value="Luxury Suite">Luxury Suite — ₹4,000/night</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="guests">Number of Guests</label>
+                  <select id="guests" name="guests">
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="checkIn">Check-in Date *</label>
+                  <input id="checkIn" name="checkIn" type="date" required>
+                </div>
+
+                <div class="field">
+                  <label for="checkOut">Check-out Date *</label>
+                  <input id="checkOut" name="checkOut" type="date" required>
+                </div>
+
+                <div class="field full">
+                  <div class="estimate" id="estimate">Estimated total: ₹0 (select dates)</div>
+                </div>
+
+                <div class="field full">
+                  <button class="btn" type="submit">Confirm Demo Booking</button>
+                  <p id="formMessage" class="message" role="status"></p>
+                </div>
+              </div>
+            </form>
+
+            <div class="booking-list">
+              <h3>Booking Records</h3>
+              <p class="empty" id="emptyState">No bookings yet. Your demo bookings will appear here.</p>
+              <div id="bookingRecords"></div>
+              <button type="button" class="delete-btn" id="clearBookings">Clear All Demo Records</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact Us</h2>
+          <p>We are happy to help you plan your stay.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="emoji">📍</div>
+            <h3>Address</h3>
+            <p>1013 Hotel Bajrangi, Bilimora</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="emoji">📞</div>
+            <h3>Phone</h3>
+            <p>+91 98765 43210</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="emoji">✉️</div>
+            <h3>Email</h3>
+            <p>example@gmail.come</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Grand Vista Hotel — Student Mini Project</p>
+      <p>Developed using HTML, CSS and JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
